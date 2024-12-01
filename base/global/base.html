@@ -1,17 +1,20 @@
 {% include "global/partials/application.html" %}
 {% include "global/partials/navbar.html" %}
 
-<main class="content">
-  {% block header %}
-      <h1>{% block title %} Title {% endblock  %}</h1>
-      <p>{% block desc %}description{% endblock  %}</p>
-  {% endblock  %}
+<div class="container">
+	<main class="content">
+		{% block header %}
+			<h1>{% block title %} Title {% endblock  %}</h1>
+			<p>{% block desc %}description{% endblock  %}</p>
+		{% endblock  %}
+	  
+		{% block section %}
+			{% block aside %}{% endblock  %}
+	  
+			{% block footer %}
+				<p>Copyright 2024 | {{ text }}</p>
+			{% endblock  %}
+		{% endblock  %}
+	  </main>
+</div>
 
-  {% block section %}
-      {% block aside %}{% endblock  %}
-
-      {% block footer %}
-          <p>Copyright 2024 | {{ text }}</p>
-      {% endblock  %}
-  {% endblock  %}
-</main>
