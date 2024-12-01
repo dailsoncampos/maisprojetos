@@ -5,4 +5,4 @@ class Views:
         self.template = Template()
 
     def catalog(self, request):
-        return self.template.render(request, 'index.html')
+        return self.template.render(request, 'index.html', {'content': 'Catálogo'})
